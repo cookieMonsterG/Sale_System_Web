@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit Form</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./submit.js" type="text/javascript"></script>
+    
 </head>
+
 <body>
+    
     <h1>Submit Form</h1>
     <!-- show users' information -->
     <p class="personalInfo">Name:</p>
     <p class="personalInfo">Phone:</p>
     <p class="personalInfo">E-mail</p>
 
+    <script>
+        let info = document.getElementsByClassName("personalInfo");
+        info[0].innerHTML = "Name: " + sessionStorage.getItem("name");
+    </script>
+
     <!-- input item information -->
-    <label for="itemName">Item Name</label>    
-    <input type="text" name="itemName" id="itemName">
-    
-    <label for="inputPassword" class="visually-hidden">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <label for="itemName">Item Name</label>
+    <input class="itemInfo" type="text" name="itemName" id="itemName" required> <br>
+
+    <label for="itemDescription">Item Description</label> <br>
+    <textarea class="itemInfo" id="itemDescription" name="itemDescription" cols="20" rows="10"></textarea> <br>
+
+    <label for="url">URL (optional)</label>
+    <input class="itemInfo" type="text" name="url" id="url"> <br> <br>
+
+    <label for="picture">add picture(optional)</label>
+    <input class="itemInfo" type="file" name="itemName" id="itemName"> <br>
+
+    <label for="price">Ori. Price</label>
+    <input class="itemInfo" type="text" name="price" id="price"> <br>
+
+    <label for="salePrice">Sale. Price</label>
+    <input class="itemInfo" type="text" name="salePrice" id="salePrice"> <br>
+
+    <button type="submit" id="addDescription">Add Description</button>
+    <button id="finish">Finish</button>
+
+    <script>
+       
+    </script>
 </body>
+
 </html>
