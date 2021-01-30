@@ -42,9 +42,9 @@ app.post("genratePDF", function(req, res){
 
 // Take any port number of your choice which 
 // is not taken by any other process 
-app.listen(8080, function (error) {
+app.listen(3000, function (error) {
     if (error) throw error
-    console.log("Server created Successfully on PORT 8080")
+    console.log("Server created Successfully on PORT 3000")
 
 })
 

@@ -16,7 +16,7 @@ const items = {
         amount: 59.00
       },
       {
-        image: "product2.png",
+        image: "/Users/chenkairen/Downloads/product2.png",
         item: "desktop",
         description: "table... abcdefghijklmnopqrstuvwxyz",
         url: "none",
@@ -51,8 +51,8 @@ function generateHeader(doc) {
         .fillColor("#444444")
         .fontSize(10)
         .text("Name: " + items.name, 450, 65, {align: "left"})
-        .text("phone: " + items.phone, 450, 80, { align: "left" })
-        .text("email: " + items.email, 450, 95, { align: "left" })
+        .text("Phone: " + items.phone, 450, 80, { align: "left" })
+        .text("Email: " + items.email, 450, 95, { align: "left" })
         .moveDown();
 }
   
