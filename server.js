@@ -11,6 +11,25 @@ app.get("/", function(req, res){
     res.render("home");
 })
 
+
+app.get("/submitForm", function(req,res){
+    res.render("submitForm");
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 app.post("genratePDF", function(req, res){
 
     
