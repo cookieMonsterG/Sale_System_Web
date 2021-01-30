@@ -12,9 +12,12 @@ app.get("/", function(req, res){
 })
 
 app.post("genratePDF", function(req, res){
-
-    
-
+    const PDFDocument = require('pdfkit');
+    const fs = require('fs');
+    let pdfDoc = new PDFDocument;
+    pdfDoc.pipe(fs.createWriteStream('SampleDocument.pdf'));
+    pdfDoc.text("My Sample PDF Document");
+    pdfDoc.end();
 })
 
 // Take any port number of your choice which 
