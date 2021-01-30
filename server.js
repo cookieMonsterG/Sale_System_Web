@@ -25,11 +25,6 @@ app.get("/submitForm", function(req,res){
 
 
 
-
-
-
-
-
 app.post("genratePDF", function(req, res){
     const PDFDocument = require('pdfkit');
     const fs = require('fs');
