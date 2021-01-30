@@ -25,7 +25,7 @@ app.get("/submitForm", function(req,res){
 
 
 
-app.post("/genratePDF", function(req, res){
+app.post("/generatePDF", function(req, res){
     const PDFDocument = require('pdfkit');
     const fs = require('fs');
 
@@ -33,6 +33,8 @@ app.post("/genratePDF", function(req, res){
     pdfDoc.pipe(fs.createWriteStream('SampleDocument.pdf'));
     pdfDoc.text("My Sample PDF Document");
     pdfDoc.end();
+
+    console.log(req.body.data);
 })
 
 // Take any port number of your choice which 
