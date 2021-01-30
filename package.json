@@ -1,0 +1,25 @@
+{
+  "name": "hackviolet_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guokenlin1/Sale_System_Web.git"
+  },
+  "author": "Kenlin Guo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guokenlin1/Sale_System_Web/issues"
+  },
+  "homepage": "https://github.com/guokenlin1/Sale_System_Web#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}
