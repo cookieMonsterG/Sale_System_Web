@@ -31,15 +31,20 @@ app.get("/submitForm", function(req,res){
 
 
 app.post("genratePDF", function(req, res){
-    
-    
+    const PDFDocument = require('pdfkit');
+    const fs = require('fs');
+
+    let pdfDoc = new PDFDocument;
+    pdfDoc.pipe(fs.createWriteStream('SampleDocument.pdf'));
+    pdfDoc.text("My Sample PDF Document");
+    pdfDoc.end();
 })
 
 // Take any port number of your choice which 
 // is not taken by any other process 
-app.listen(3000, function (error) {
+app.listen(8080, function (error) {
     if (error) throw error
-    console.log("Server created Successfully on PORT 3000")
+    console.log("Server created Successfully on PORT 8080")
 
 })
 
