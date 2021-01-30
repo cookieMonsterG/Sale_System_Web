@@ -25,11 +25,6 @@ app.get("/submitForm", function(req,res){
 
 
 
-
-
-
-
-
 app.post("genratePDF", function(req, res){
 
     
