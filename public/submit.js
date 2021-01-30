@@ -56,7 +56,11 @@ function finish() {
     finishButton = document.getElementById("finish");
     if (finishButton) {
         finishButton.addEventListener("click", function () {
+<<<<<<< HEAD
             const request = new XMLHttpRequest();
+=======
+            const reqest = new XMLHttpRequest();
+>>>>>>> ad21186911176aee1519d1993c01e15a4e8a8588
             const url = "http://localhost:8080/generatePDF";
             request.open("POST", url, true);
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
