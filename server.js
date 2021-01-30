@@ -31,9 +31,8 @@ app.get("/submitForm", function(req,res){
 
 
 app.post("genratePDF", function(req, res){
-
     
-
+    
 })
 
 // Take any port number of your choice which 
