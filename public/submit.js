@@ -41,6 +41,7 @@ function add() {
                 salePrice: itemInfo[5].value
             }
             itemList.push(item);
+            alert("Item add to the list");
         });
     }
 }
@@ -59,9 +60,11 @@ function finish() {
             const reqest = new XMLHttpRequest();
             const url = "http://localhost:8080/generatePDF";
             request.open("POST", url, true);
-            request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            request.setRequestHeader("Content-type", "application/json");
             let data = JSON.stringify(uploadJson);
-            request.send(`data=${data}`);
+            request.send(data);
+
+            
         });
     }
 
