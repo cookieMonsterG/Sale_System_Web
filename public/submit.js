@@ -57,14 +57,20 @@ function finish() {
     finishButton = document.getElementById("finish");
     if (finishButton) {
         finishButton.addEventListener("click", function () {
-            const request = new XMLHttpRequest();
-            const url = "http://localhost:8080/generatePDF";
-            request.open("POST", url, true);
-            request.setRequestHeader("Content-type", "application/json");
-            let data = JSON.stringify(uploadJson);
-            request.send(data);
-
-            //
+            jQuery.ajax({
+                url: "http://localhost:8080/generatePDF",
+                type: "POST",
+                data: uploadJson,
+                dataType: "json",
+                beforeSend: function (x) {
+                    if (x && x.overrideMimeType) {
+                        x.overrideMimeType("application/j-son;charset=UTF-8");
+                    }
+                },
+                success: function (result) {
+                    console.log(result)
+                }
+            });
         });
     }
 
