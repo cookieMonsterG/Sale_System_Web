@@ -59,13 +59,26 @@ app.post("/generatePDF", function(req, res){
      * Generate each items as a row to the table into the pdf file
      */
     function generateTableRow(doc, y, c1, c2, c3, c4, c5) {
-        doc
+
+        if(c1 == "" || c1 == null)
+        {
+            doc
+            .fontSize(10)
+           
+            .text(c2, 150, y)
+            .text(c3, 280, y, { width: 90, align: "right" })
+            .text(c4, 370, y, { width: 90, align: "right" })
+            .text(c5, 0, y, { align: "right" });
+        }
+        else{
+            doc
             .fontSize(10)
             .image(c1, 50, y, { width: 70 })
             .text(c2, 150, y)
             .text(c3, 280, y, { width: 90, align: "right" })
             .text(c4, 370, y, { width: 90, align: "right" })
             .text(c5, 0, y, { align: "right" });
+        }
     }
 
     /**
