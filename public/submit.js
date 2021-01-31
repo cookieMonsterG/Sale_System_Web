@@ -64,7 +64,7 @@ function finish() {
             let data = JSON.stringify(uploadJson);
             request.send(data);
 
-            
+            //
         });
     }
 
