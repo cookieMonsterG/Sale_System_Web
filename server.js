@@ -29,7 +29,7 @@ app.post("/generatePDF", function(req, res){
      */
     const PDFDocument = require('pdfkit');
     const fs = require('fs');
-
+    console.log("generatePDF");
     //==========example of Json Object=========
     const items = {
         items: [
