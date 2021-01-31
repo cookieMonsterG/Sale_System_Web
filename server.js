@@ -98,7 +98,7 @@ app.post("/generatePDF", function(req, res){
             item.item,
             item.description,
             item.quantity,
-            item.amount.toFixed(2)
+            item.amount
             );
         }
     }
