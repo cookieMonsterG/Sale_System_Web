@@ -24,7 +24,8 @@ let addButton;
 function add() {
     addButton = document.getElementById("addDescription");
     if (addButton) {
-        addButton.addEventListener("click", function () {
+        addButton.addEventListener("click", function (e) {
+            e.preventDefault();
             let itemInfo = document.getElementsByClassName("itemInfo");
             let file = itemInfo[3];
             //check if there is a file uploaded
@@ -69,6 +70,7 @@ function finish() {
                     console.log(result)
                 }
             });
+            alert("PDF created");
         });
     }
 

@@ -17,8 +17,6 @@ app.get("/submitForm", function(req,res){
 })
 
 app.post("/generatePDF", function(req, res){
-
-    console.log(req.body)
     /**
      * Initialization for pdfkit library
      */
@@ -129,8 +127,7 @@ app.post("/generatePDF", function(req, res){
     }
 
     createPdf(items, "SampleDocument.pdf");
-    var filename = "SampleDocument.pdf"; 
-    //window.open(filename);
+
 })
 
 // Take any port number of your choice which 
