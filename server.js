@@ -17,7 +17,6 @@ app.get("/submitForm", function(req,res){
 })
 
 
-
 app.post("/generatePDF", function(req, res){
     /**
      * Initialization for pdfkit library
