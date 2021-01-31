@@ -16,8 +16,6 @@ app.get("/submitForm", function(req,res){
     res.render("submitForm");
 })
 
-
-
 app.post("/generatePDF", function(req, res){
 
     console.log(req.body)
