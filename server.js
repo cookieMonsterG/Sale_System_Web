@@ -25,30 +25,8 @@ app.post("/generatePDF", function(req, res){
     const PDFDocument = require('pdfkit');
     const fs = require('fs');
     console.log("generatePDF");
-    //==========example of Json Object=========
-    const items = {
-        items: [
-        {
-            image: "product1.png",
-            item: "Toyota Car 1996",
-            description: "toyota car abcdefghijklmnopqrstuvwxyz ",
-            url: "none",
-            quantity: 1,
-            amount: 59.00
-        },
-        {
-            image: "F:/Spring2021/hackviolet_web/product2.png",
-            item: "desktop",
-            description: "table... abcdefghijklmnopqrstuvwxyz",
-            url: "none",
-            quantity: 1,
-            amount: 69.00
-        }
-        ],
-        name: "kai",
-        phone: "3478284533",
-        email: "renc2@vt.edu"
-    };
+    
+    const items = req.body;
 
     /**
      * Create PDF document with appropriate functions and file name

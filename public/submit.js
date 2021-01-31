@@ -33,20 +33,18 @@ function add() {
             }
             //create a json to store information of each item
             let item = {
-                name: itemInfo[0].value,
+                item: itemInfo[0].value,
                 description: itemInfo[1].value,
                 url: itemInfo[2].value,
-                picture: itemInfo[3].value,
-                oriPrice: itemInfo[4].value,
-                salePrice: itemInfo[5].value
+                image: itemInfo[3].value,
+                amount: Number(itemInfo[4].value),
+                quantity: 1
             }
             itemList.push(item);
             alert("Item add to the list");
         });
     }
 }
-
-
 
 /**
  * when "finish" button is clicked
