@@ -57,7 +57,7 @@ function finish() {
     finishButton = document.getElementById("finish");
     if (finishButton) {
         finishButton.addEventListener("click", function () {
-            const reqest = new XMLHttpRequest();
+            const request = new XMLHttpRequest();
             const url = "http://localhost:8080/generatePDF";
             request.open("POST", url, true);
             request.setRequestHeader("Content-type", "application/json");
