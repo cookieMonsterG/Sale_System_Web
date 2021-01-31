@@ -10,7 +10,9 @@
     <input type="text" placeholder="name" name="name" id="name" required> <br>
     <input type="text" placeholder="Phone number" name="phoneNumber" id="phoneNumber" required> <br>
     <input type="text" placeholder="email" name="email" id="email" required> <br>
+    <button id="submitButton">submit</button>
 
+    
     <script>
         let name = document.getElementById("name").value;
         let phoneNumber = document.getElementById("phoneNumber").value;
@@ -20,8 +22,6 @@
         sessionStorage.setItem("phoneNumber", phoneNumber);
         sessionStorage.setItem("email", email);//
     </script>
-
-    <button id="submitButton">submit</button>
     <script type="text/javascript">
         document.getElementById("submitButton").onclick = function () {
             window.location.href = "http://" + window.location.host + "/submitForm";
